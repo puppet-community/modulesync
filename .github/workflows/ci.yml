@@ -48,6 +48,11 @@ jobs:
         run: bundle exec rake spec
       - name: Run behavior tests
         run: bundle exec cucumber
+        env:
+          GIT_COMMITTER_NAME: 'Aruba'
+          GIT_COMMITTER_EMAIL: 'aruba@example.com'
+          GIT_AUTHOR_NAME: 'Aruba'
+          GIT_AUTHOR_EMAIL: 'aruba@example.com'
       - name: Build gem
         run: gem build --strict --verbose *.gemspec
   tests:
