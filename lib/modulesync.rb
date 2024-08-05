@@ -178,7 +178,7 @@ module ModuleSync
     # managed_modules is either an array or a hash
     managed_modules.each do |puppet_module|
       manage_module(puppet_module, module_files, defaults)
-    rescue ModuleSync::Error, Git::GitExecuteError => e
+    rescue ModuleSync::Error, Git::Error => e
       message = e.message || 'Error during `update`'
       warn "#{puppet_module.given_name}: #{message}"
       exit 1 unless options[:skip_broken]
