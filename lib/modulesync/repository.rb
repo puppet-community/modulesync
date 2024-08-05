@@ -158,7 +158,7 @@ module ModuleSync
           repo.push('origin', branch, opts_push)
           puts "Changes have been pushed to: '#{branch}'"
         end
-      rescue Git::GitExecuteError => e
+      rescue Git::Error => e
         raise unless e.message.match?(/working (directory|tree) clean/)
 
         puts "There were no changes in '#{@directory}'. Not committing."
