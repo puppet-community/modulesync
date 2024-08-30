@@ -29,5 +29,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'gitlab', '>=4', '<6'
   spec.add_runtime_dependency 'octokit', '>=4', '<10'
   spec.add_runtime_dependency 'puppet-blacksmith', '>= 3.0', '< 8'
-  spec.add_runtime_dependency 'thor', '1.3.0'
+  spec.add_runtime_dependency 'thor', '1.3.2'
 end
