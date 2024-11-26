@@ -45,6 +45,9 @@ module ModuleSync
     def switch(branch:)
       unless branch
         branch = default_branch
+        unless branch
+          raise "Unable to detect default branch"
+        end
         puts "Using repository's default branch: #{branch}"
       end
       return if repo.current_branch == branch
